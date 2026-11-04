@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set('America/Bogota');
 
-// Sesión larga para que no se cierre cada rato en Render (24h)
-ini_set('session.gc_maxlifetime', 86400);
-ini_set('session.cookie_lifetime', 86400);
+// Sesión larga solo si aún no está activa
 if(session_status()===PHP_SESSION_NONE){
+    ini_set('session.gc_maxlifetime', 86400);
+    ini_set('session.cookie_lifetime', 86400);
     session_set_cookie_params([
         'lifetime' => 86400,
         'path' => '/',
