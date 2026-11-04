@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rio-autowash
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_HOST
+        value: sql109.infinityfree.com
+      - key: DB_NAME
+        value: if0_43239394_ventas_rio
+      - key: DB_USER
+        value: if0_43239394
+      - key: DB_PASS
+        sync: false
