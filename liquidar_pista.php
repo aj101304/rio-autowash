@@ -1,6 +1,6 @@
 <?php
-require 'includes/auth.php';
 require 'config/database.php';
+require 'includes/auth.php';
 
 $fecha = $_GET['fecha'] ?? date('Y-m-d');
 
