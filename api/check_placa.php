@@ -1,6 +1,6 @@
 <?php
-require 'includes/auth.php';
 require 'config/database.php';
+require 'includes/auth.php';
 date_default_timezone_set('America/Bogota');
 $placa = strtoupper(trim($_GET['placa'] ?? ''));
 $fecha = $_GET['fecha'] ?? date('Y-m-d');
