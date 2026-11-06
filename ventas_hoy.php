@@ -1,6 +1,6 @@
 <?php
-require 'includes/auth.php';
 require 'config/database.php';
+require 'includes/auth.php';
 $fecha=$_GET['fecha'] ?? date('Y-m-d');
 $q=$_GET['q'] ?? '';
 $sql="SELECT v.*, GROUP_CONCAT(CONCAT(d.servicio, ' ($', FORMAT(d.precio,0,'de_DE'), ')') SEPARATOR ' + ') as servicios_txt FROM ventas v LEFT JOIN venta_detalle d ON d.venta_id=v.id WHERE v.fecha=? ";
